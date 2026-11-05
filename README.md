@@ -54,7 +54,7 @@ Previews use the original transparent PNGs. Click a name to open the full image.
 | [Joyn](icons/Joyn-16x9.png) | <img src="icons/Joyn-16x9.png" alt="Joyn" width="240"> |
 | [RTL+](icons/RTL-16x9.png) | <img src="icons/RTL-16x9.png" alt="RTL+" width="240"> |
 | [SmartTube](icons/SmartTube-16x9.png) | <img src="icons/SmartTube-16x9.png" alt="SmartTube" width="240"> |
-| [Waipu tv](icons/Waipu%20tv-16x9.png) | <img src="icons/Waipu%20tv-16x9.png" alt="Waipu tv" width="240"> |
+| [Waipu tv](icons/Waipu%20tv-16x9.png) | <img src="icons/Waipu%20tv-16x9.png?v=3" alt="Waipu tv" width="240"> |
 | [Wholphin](icons/Wholphin-16x9.png) | <img src="icons/Wholphin-16x9.png" alt="Wholphin" width="240"> |
 | [WOW TV](icons/WOW%20TV-16x9.png) | <img src="icons/WOW%20TV-16x9.png" alt="WOW TV" width="240"> |
 | [YouTube](icons/YouTube-16x9.png) | <img src="icons/YouTube-16x9.png" alt="YouTube" width="240"> |
