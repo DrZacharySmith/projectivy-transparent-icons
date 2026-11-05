@@ -46,6 +46,11 @@ Previews use the original transparent PNGs. Click a name to open the full image.
 | [Vimu](icons/Vimu%20-%2016x9.png) | <img src="icons/Vimu%20-%2016x9.png" alt="Vimu" width="240"> |
 | [ProtonVPN](icons/ProtonVPN-16x9.png) | <img src="icons/ProtonVPN-16x9.png?v=2" alt="ProtonVPN" width="240"> |
 | [File Manager](icons/File%20Manager-16x9.png) | <img src="icons/File%20Manager-16x9.png" alt="File Manager" width="240"> |
+| [Apple TV](icons/Apple%20TV-16x9.png) | <img src="icons/Apple%20TV-16x9.png" alt="Apple TV" width="240"> |
+| [Cedar](icons/Cedar-16x9.png) | <img src="icons/Cedar-16x9.png" alt="Cedar" width="240"> |
+| [HBO Max](icons/HBO%20Max-16x9.png) | <img src="icons/HBO%20Max-16x9.png" alt="HBO Max" width="240"> |
+| [Netflix](icons/Netflix-16x9.png) | <img src="icons/Netflix-16x9.png" alt="Netflix" width="240"> |
+| [Prime Video](icons/Prime-16x9.png) | <img src="icons/Prime-16x9.png" alt="Prime Video" width="240"> |
 
 ## Image details
 
