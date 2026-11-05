@@ -44,7 +44,7 @@ Previews use the original transparent PNGs. Click a name to open the full image.
 | [VesperTV](icons/VesperTV-16x9.png) | <img src="icons/VesperTV-16x9.png" alt="VesperTV" width="240"> |
 | [Viewella](icons/Viewella-16x9.png) | <img src="icons/Viewella-16x9.png" alt="Viewella" width="240"> |
 | [Vimu](icons/Vimu%20-%2016x9.png) | <img src="icons/Vimu%20-%2016x9.png" alt="Vimu" width="240"> |
-| [ProtonVPN](icons/ProtonVPN-16x9.png) | <img src="icons/ProtonVPN-16x9.png" alt="ProtonVPN" width="240"> |
+| [ProtonVPN](icons/ProtonVPN-16x9.png) | <img src="icons/ProtonVPN-16x9.png?v=2" alt="ProtonVPN" width="240"> |
 | [File Manager](icons/File%20Manager-16x9.png) | <img src="icons/File%20Manager-16x9.png" alt="File Manager" width="240"> |
 
 ## Image details
