@@ -51,6 +51,11 @@ Previews use the original transparent PNGs. Click a name to open the full image.
 | [HBO Max](icons/HBO%20Max-16x9.png) | <img src="icons/HBO%20Max-16x9.png" alt="HBO Max" width="240"> |
 | [Netflix](icons/Netflix-16x9.png) | <img src="icons/Netflix-16x9.png" alt="Netflix" width="240"> |
 | [Prime Video](icons/Prime-16x9.png) | <img src="icons/Prime-16x9.png" alt="Prime Video" width="240"> |
+| [Apple TV](icons/Apple%20TV-16x9.png) | <img src="icons/Apple%20TV-16x9.png" alt="Apple TV" width="240"> |
+| [Cedar](icons/Cedar-16x9.png) | <img src="icons/Cedar-16x9.png" alt="Cedar" width="240"> |
+| [HBO Max](icons/HBO%20Max-16x9.png) | <img src="icons/HBO%20Max-16x9.png" alt="HBO Max" width="240"> |
+| [Netflix](icons/Netflix-16x9.png) | <img src="icons/Netflix-16x9.png" alt="Netflix" width="240"> |
+| [Prime Video](icons/Prime-16x9.png) | <img src="icons/Prime-16x9.png" alt="Prime Video" width="240"> |
 
 ## Image details
 
