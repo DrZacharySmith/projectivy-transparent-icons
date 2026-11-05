@@ -1,7 +1,7 @@
 ![Projectivy Transparent Icons](Projectivy-Icons-Proof-Sheet.png?v=43)
 # Projectivy Transparent Icons
 
-A collection of **42 transparent PNG icons** for customizing Projectivy Launcher on Android TV and Google TV.
+A collection of **45 transparent PNG icons** for customizing Projectivy Launcher on Android TV and Google TV.
 
 ## Request an icon
 
@@ -64,6 +64,9 @@ Previews use the original transparent PNGs. Click a name to open the full image.
 | [Wholphin](icons/Wholphin-16x9.png) | <img src="icons/Wholphin-16x9.png?v=2" alt="Wholphin" width="240"> |
 | [WOW TV](icons/WOW%20TV-16x9.png) | <img src="icons/WOW%20TV-16x9.png" alt="WOW TV" width="240"> |
 | [YouTube](icons/YouTube-16x9.png) | <img src="icons/YouTube-16x9.png" alt="YouTube" width="240"> |
+| [Surfshark](icons/Surfshark-16x9.png) | <img src="icons/Surfshark-16x9.png" alt="Surfshark" width="240"> |
+| [SYNCLER](icons/SYNCLER-16x9.png) | <img src="icons/SYNCLER-16x9.png" alt="SYNCLER" width="240"> |
+| [TizenTube](icons/TizenTube-16x9.png) | <img src="icons/TizenTube-16x9.png" alt="TizenTube" width="240"> |
 
 ## Image details
 
