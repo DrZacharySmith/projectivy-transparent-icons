@@ -1,7 +1,7 @@
-![Projectivy Transparent Icons](Projectivy-Icons-Proof-Sheet.png?v=61)
+![Projectivy Transparent Icons](Projectivy-Icons-Proof-Sheet.png?v=76)
 # Projectivy Transparent Icons
 
-A collection of **61 transparent PNG icons** for customizing Projectivy Launcher on Android TV and Google TV.
+A collection of **76 transparent PNG icons** for customizing Projectivy Launcher on Android TV and Google TV.
 
 ## Request an icon
 
@@ -46,6 +46,11 @@ Click an image or name to open its PNG, then choose **Download raw file**.
 | [<img src="icons/Viewella-16x9.png" width="180" alt="Viewella">](icons/Viewella-16x9.png)<br>[Viewella](icons/Viewella-16x9.png) | [<img src="icons/Vimu%20-%2016x9.png" width="180" alt="Vimu">](icons/Vimu%20-%2016x9.png)<br>[Vimu](icons/Vimu%20-%2016x9.png) | [<img src="icons/%20Waipu%20tv-16x9.png" width="180" alt="Waipu tv">](icons/%20Waipu%20tv-16x9.png)<br>[Waipu tv](icons/%20Waipu%20tv-16x9.png) |
 | [<img src="icons/Wholphin-16x9.png?v=2" width="180" alt="Wholphin">](icons/Wholphin-16x9.png)<br>[Wholphin](icons/Wholphin-16x9.png) | [<img src="icons/WOW%20TV-16x9.png" width="180" alt="WOW TV">](icons/WOW%20TV-16x9.png)<br>[WOW TV](icons/WOW%20TV-16x9.png) | [<img src="icons/X-plore-16x9.png" width="180" alt="X-plore">](icons/X-plore-16x9.png)<br>[X-plore](icons/X-plore-16x9.png) |
 | [<img src="icons/YouTube-16x9.png" width="180" alt="YouTube">](icons/YouTube-16x9.png)<br>[YouTube](icons/YouTube-16x9.png) | | |
+| [<img src="icons/DAZN-16x9.png" width="180" alt="DAZN">](icons/DAZN-16x9.png)<br>[DAZN](icons/DAZN-16x9.png) | [<img src="icons/DAZN%20%28alt%29-16x9.png" width="180" alt="DAZN alternate">](icons/DAZN%20%28alt%29-16x9.png)<br>[DAZN (alternate)](icons/DAZN%20%28alt%29-16x9.png) | [<img src="icons/Downloader-16x9.png" width="180" alt="Downloader">](icons/Downloader-16x9.png)<br>[Downloader](icons/Downloader-16x9.png) |
+| [<img src="icons/JustWatch-16x9.png" width="180" alt="JustWatch">](icons/JustWatch-16x9.png)<br>[JustWatch](icons/JustWatch-16x9.png) | [<img src="icons/LocalSend-16x9.png" width="180" alt="LocalSend">](icons/LocalSend-16x9.png)<br>[LocalSend](icons/LocalSend-16x9.png) | [<img src="icons/mytvOnline3-16x9.png" width="180" alt="mytvOnline3">](icons/mytvOnline3-16x9.png)<br>[mytvOnline3](icons/mytvOnline3-16x9.png) |
+| [<img src="icons/Paramount%2B-16x9.png" width="180" alt="Paramount+">](icons/Paramount%2B-16x9.png)<br>[Paramount+](icons/Paramount%2B-16x9.png) | [<img src="icons/Peacock-16x9.png" width="180" alt="Peacock">](icons/Peacock-16x9.png)<br>[Peacock](icons/Peacock-16x9.png) | [<img src="icons/PlutoTV-16x9.png" width="180" alt="PlutoTV">](icons/PlutoTV-16x9.png)<br>[PlutoTV](icons/PlutoTV-16x9.png) |
+| [<img src="icons/PlutoTV%28alt%29-16x9.png" width="180" alt="PlutoTV alternate">](icons/PlutoTV%28alt%29-16x9.png)<br>[PlutoTV (alternate)](icons/PlutoTV%28alt%29-16x9.png) | [<img src="icons/Projectivy%20Icons-16x9.png" width="180" alt="Projectivy Icons">](icons/Projectivy%20Icons-16x9.png)<br>[Projectivy Icons](icons/Projectivy%20Icons-16x9.png) | [<img src="icons/Projectivy%20Wallpaper-16x9.png" width="180" alt="Projectivy Wallpaper">](icons/Projectivy%20Wallpaper-16x9.png)<br>[Projectivy Wallpaper](icons/Projectivy%20Wallpaper-16x9.png) |
+| [<img src="icons/Roku-16x9.png" width="180" alt="Roku">](icons/Roku-16x9.png)<br>[Roku](icons/Roku-16x9.png) | [<img src="icons/tvQAPRO-16x9.png" width="180" alt="tvQAPRO">](icons/tvQAPRO-16x9.png)<br>[tvQAPRO](icons/tvQAPRO-16x9.png) | [<img src="icons/VLC-16x9.png" width="180" alt="VLC">](icons/VLC-16x9.png)<br>[VLC](icons/VLC-16x9.png) |
 
 <details open>
 
