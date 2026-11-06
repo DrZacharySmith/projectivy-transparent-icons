@@ -1,7 +1,7 @@
-![Projectivy Transparent Icons](Projectivy-Icons-Proof-Sheet.png?v=45)
+![Projectivy Transparent Icons](Projectivy-Icons-Proof-Sheet.png?v=61)
 # Projectivy Transparent Icons
 
-A collection of **45 transparent PNG icons** for customizing Projectivy Launcher on Android TV and Google TV.
+A collection of **61 transparent PNG icons** for customizing Projectivy Launcher on Android TV and Google TV.
 
 ## Request an icon
 
@@ -67,6 +67,22 @@ Previews use the original transparent PNGs. Click a name to open the full image.
 | [Surfshark](icons/Surfshark-16x9.png) | <img src="icons/Surfshark-16x9.png" alt="Surfshark" width="240"> |
 | [SYNCLER](icons/SYNCLER-16x9.png) | <img src="icons/SYNCLER-16x9.png" alt="SYNCLER" width="240"> |
 | [TizenTube](icons/TizenTube-16x9.png) | <img src="icons/TizenTube-16x9.png" alt="TizenTube" width="240"> |
+| [Aerial Views](icons/Aerial%20Views-16x9.png) | <img src="icons/Aerial%20Views-16x9.png" alt="Aerial Views" width="240"> |
+| [Buttons Remapper](icons/Buttons%20Remapper-16x9.png) | <img src="icons/Buttons%20Remapper-16x9.png" alt="Buttons Remapper" width="240"> |
+| [Channel 4](icons/Channel%204-16x9.png) | <img src="icons/Channel%204-16x9.png" alt="Channel 4" width="240"> |
+| [CPU Info](icons/CPU%20Info-16x9.png) | <img src="icons/CPU%20Info-16x9.png" alt="CPU Info" width="240"> |
+| [Debrid Stream](icons/Debrid%20Stream-16x9.png) | <img src="icons/Debrid%20Stream-16x9.png" alt="Debrid Stream" width="240"> |
+| [Google Play](icons/Google%20Play-16x9.png) | <img src="icons/Google%20Play-16x9.png" alt="Google Play" width="240"> |
+| [Internet Speed Test](icons/Internet%20Speed%20Test-16x9.png) | <img src="icons/Internet%20Speed%20Test-16x9.png" alt="Internet Speed Test" width="240"> |
+| [MagentaTV](icons/MagentaTV-16x9.png) | <img src="icons/MagentaTV-16x9.png" alt="MagentaTV" width="240"> |
+| [MiXplorer](icons/MiXplorer-16x9.png) | <img src="icons/MiXplorer-16x9.png" alt="MiXplorer" width="240"> |
+| [MiXplorer (alternate)](icons/MiXplorer%20%28alt%29-16x9.png) | <img src="icons/MiXplorer%20%28alt%29-16x9.png" alt="MiXplorer alternate" width="240"> |
+| [Nuvio IPTV](icons/Nuvio%20IPTV-16x9.png) | <img src="icons/Nuvio%20IPTV-16x9.png" alt="Nuvio IPTV" width="240"> |
+| [Plex](icons/Plex-16x9.png) | <img src="icons/Plex-16x9.png" alt="Plex" width="240"> |
+| [SportzXTV](icons/SportzXTV-16x9.png) | <img src="icons/SportzXTV-16x9.png" alt="SportzXTV" width="240"> |
+| [Spotify](icons/Spotify-16x9.png) | <img src="icons/Spotify-16x9.png" alt="Spotify" width="240"> |
+| [Tubi](icons/Tubi-16x9.png) | <img src="icons/Tubi-16x9.png" alt="Tubi" width="240"> |
+| [X-plore](icons/X-plore-16x9.png) | <img src="icons/X-plore-16x9.png" alt="X-plore" width="240"> |
 
 ## Image details
 
