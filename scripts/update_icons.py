@@ -62,7 +62,11 @@ for i,p in enumerate(files):
     d.text((x+cw/2,y+ch-38),label,font=font(size,True),fill='#edf3fc',anchor='mt')
 d.text((margin,H-66),'AI-generated artwork • Unofficial app icons • Names and logos belong to their respective owners',font=font(23),fill='#a8b9d0')
 sheet.save(PROOF,optimize=True)
-proof_url=f'Projectivy-Icons-Proof-Sheet.png?v={version(PROOF)}'
-text=re.sub(r'(!\[Projectivy Transparent Icons\]\()Projectivy-Icons-Proof-Sheet\.png(?:\?[^)]*)?(\))',lambda m:m[1]+proof_url+m[2],text)
-README.write_text(text,encoding='utf-8')
+proof_url = f'https://raw.githubusercontent.com/DrZacharySmith/projectivy-transparent-icons/main/Projectivy-Icons-Proof-Sheet.png?v={version(PROOF)}'
+text = re.sub(
+    r'!\[Projectivy Transparent Icons\]\([^)]*\)',
+    lambda _: f'![Projectivy Transparent Icons]({proof_url})',
+    text,
+)
+README.write_text(text, encoding='utf-8')
 print(f'Updated {count} icons, gallery, count, and proof sheet.')
