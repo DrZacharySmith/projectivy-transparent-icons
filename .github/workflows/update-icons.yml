@@ -1,4 +1,5 @@
 name: Update icon gallery and proof sheet
+
 on:
   push:
     branches: [main]
@@ -7,11 +8,19 @@ on:
       - 'scripts/update_icons.py'
       - '.github/workflows/update-icons.yml'
   workflow_dispatch:
+    inputs:
+      publish_release:
+        description: Publish a release
+        type: boolean
+        default: false
+
 permissions:
   contents: write
+
 concurrency:
   group: update-icons-main
   cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -19,13 +28,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 0
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
       - name: Install image tools
         run: python -m pip install Pillow==11.3.0
+
       - name: Rebuild gallery and proof sheet
         run: python scripts/update_icons.py
+
       - name: Commit generated updates
         run: |
           git config user.name 'github-actions[bot]'
@@ -37,3 +51,48 @@ jobs:
             git commit -m 'Update icon gallery and proof sheet'
             git push
           fi
+
+      - name: Publish icon release
+        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && inputs.publish_release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          previous_tag=$(gh release view --json tagName --jq '.tagName')
+
+          if [[ ! "$previous_tag" =~ ^v([0-9]+)\.([0-9]+)$ ]]; then
+            echo "Expected a release tag like v1.5, got $previous_tag."
+            exit 1
+          fi
+          next_tag="v${BASH_REMATCH[1]}.$((10#${BASH_REMATCH[2]} + 1))"
+
+          target=$(git rev-parse HEAD)
+          changes=$(git -c core.quotePath=false diff --name-status --no-renames \
+            "$previous_tag" "$target" -- ':(glob,icase)icons/*.png')
+
+          if [[ -z "$changes" ]]; then
+            echo "No icon changes since $previous_tag. Skipping release."
+            exit 0
+          fi
+
+          if git show-ref --verify --quiet "refs/tags/$next_tag"; then
+            echo "Tag $next_tag already exists. Check it before publishing."
+            exit 1
+          fi
+
+          {
+            printf '## Icon changes since %s\n\n' "$previous_tag"
+            while IFS=$'\t' read -r status path; do
+              case "$status" in
+                A) change=Added ;;
+                M) change=Updated ;;
+                D) change=Removed ;;
+                *) change=Changed ;;
+              esac
+              printf -- '- %s: `%s`\n' "$change" "${path#icons/}"
+            done <<< "$changes"
+          } | gh release create "$next_tag" \
+            --target "$target" \
+            --title "Projectivy Transparent Icons $next_tag" \
+            --notes-file - \
+            --latest
