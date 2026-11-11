@@ -1,0 +1,77 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+  background: #0e1420;
+  color: #f0f4fb;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; }
+main { max-width: 1240px; margin: auto; padding: clamp(16px, 4vw, 44px); }
+.back { color: #9ddcff; text-underline-offset: .2em; }
+h1 { margin: 16px 0 4px; font-size: clamp(26px, 5vw, 42px); letter-spacing: -.035em; }
+p { color: #bac9dc; margin: 8px 0 18px; }
+.controls label { display: block; margin-bottom: 6px; font-weight: 650; }
+.search { display: flex; gap: 8px; max-width: 480px; }
+input, button {
+  border: 1px solid #536881;
+  border-radius: 8px;
+  background: #182335;
+  color: inherit;
+  font: inherit;
+  padding: 10px 12px;
+}
+input { width: 100%; min-width: 0; }
+input::placeholder { color: #a6b8ce; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid #9ddcff; outline-offset: 2px; }
+#count { margin: 12px 0 8px; font-size: .9rem; }
+.viewport {
+  --row: 118px;
+  --gap: 10px;
+  max-height: calc(5 * var(--row) + 4 * var(--gap) + 16px);
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  scrollbar-color: #8094ae #182335;
+  border: 1px solid #304259;
+  border-radius: 12px;
+  padding: 7px;
+}
+#icons {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-auto-rows: var(--row);
+  gap: var(--gap);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.card {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 4px;
+  height: 100%;
+  padding: 7px;
+  border: 1px solid #34465f;
+  border-radius: 8px;
+  background: #1a2433;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+.card:hover, .card:focus-visible { background: #25364c; border-color: #9ddcff; }
+.card:focus-visible { outline-offset: -3px; }
+.card img { width: 100%; height: 100%; object-fit: contain; }
+.card span { font-size: .82rem; line-height: 1.2; overflow-wrap: anywhere; }
+.card small { display: block; color: #bac9dc; }
+#empty { margin: 12px; }
+@media (max-width: 900px) {
+  #icons { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 580px) {
+  .viewport { --row: 99px; }
+  #icons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 360px) {
+  #icons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

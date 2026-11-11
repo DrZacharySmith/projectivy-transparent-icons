@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse and search transparent Projectivy Launcher icons.">
+  <title>Projectivy Icon Gallery</title>
+  <link rel="stylesheet" href="gallery.css">
+  <script defer src="gallery.js"></script>
+</head>
+<body>
+  <main>
+    <a class="back" href="https://github.com/DrZacharySmith/projectivy-transparent-icons">← Back to GitHub</a>
+    <h1>Projectivy Icon Gallery</h1>
+    <p>Search by app name or scroll inside the gallery. Select an icon to open its PNG.</p>
+    <div class="controls">
+      <label for="search">Search icons</label>
+      <div class="search">
+        <input id="search" type="search" placeholder="Try TiviMate or Nuvio" autocomplete="off" aria-controls="icons">
+        <button id="clear" type="button" hidden>Clear</button>
+      </div>
+    </div>
+    <p id="count" role="status">{{COUNT}} icons</p>
+    <section class="viewport" aria-label="Scrollable icon gallery" tabindex="0">
+      <ul id="icons">
+        {{ICONS}}
+      </ul>
+      <p id="empty" hidden>No matching icons. Try a shorter app name.</p>
+    </section>
+  </main>
+</body>
+</html>
