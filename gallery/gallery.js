@@ -9,7 +9,7 @@ function filterIcons() {
   const terms = search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
   let matches = 0;
   for (const card of cards) {
-    const label = card.textContent.toLowerCase();
+    const label = card.querySelector('span').textContent.toLowerCase();
     card.hidden = !terms.every(term => label.includes(term));
     if (!card.hidden) matches++;
   }

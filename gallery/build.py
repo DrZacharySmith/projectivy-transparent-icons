@@ -50,8 +50,10 @@ def main():
         shutil.copyfile(path, destination)
         url = quote(relative.as_posix(), safe='/')
         caption = f'{name}<small>{style}</small>' if show_styles else name
-        cards.append(f'<li><a class="card" href="{url}"><img src="{url}" alt="" loading="lazy">'
-                     f'<span>{caption}</span></a></li>')
+        filename = escape(path.name, quote=True)
+        cards.append(f'<li><a class="card" href="{url}" download="{filename}">'
+                     f'<img src="{url}" alt="" loading="lazy"><span>{caption}</span>'
+                     '<span class="download-label">Download PNG</span></a></li>')
     template = (SOURCE / 'index.html').read_text(encoding='utf-8')
     (OUTPUT / 'index.html').write_text(template.replace('{{COUNT}}', str(len(icons)))
                                        .replace('{{ICONS}}', '\n'.join(cards)), encoding='utf-8')

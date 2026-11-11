@@ -48,7 +48,7 @@ button { cursor: pointer; }
 }
 .card {
   display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-rows: minmax(0, 1fr) auto auto;
   gap: 4px;
   height: 100%;
   padding: 7px;
@@ -63,6 +63,7 @@ button { cursor: pointer; }
 .card:focus-visible { outline-offset: -3px; }
 .card img { width: 100%; height: 100%; object-fit: contain; }
 .card span { font-size: .82rem; line-height: 1.2; overflow-wrap: anywhere; }
+.card .download-label { color: #9ddcff; text-decoration: underline; }
 .card small { display: block; color: #bac9dc; }
 #empty { margin: 12px; }
 @media (max-width: 900px) {
