@@ -1,5 +1,8 @@
-![Projectivy Transparent Icons](https://raw.githubusercontent.com/DrZacharySmith/projectivy-transparent-icons/main/Projectivy-Icons-Proof-Sheet.png?v=8ce47b681bcb)
 # Projectivy Transparent Icons
+
+## [Browse and search icons →](https://drzacharysmith.github.io/projectivy-transparent-icons/)
+
+Click the link above to open the gallery. Search by app name or scroll to browse, then click an icon to open its PNG.
 
 A collection of **201 transparent PNG icons** for customizing Projectivy Launcher on Android TV and Google TV.
 
