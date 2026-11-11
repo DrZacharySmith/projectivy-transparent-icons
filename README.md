@@ -6,6 +6,12 @@ Click the link above to open the gallery. Search by app name or scroll to browse
 
 A collection of **222 transparent PNG icons** for customizing Projectivy Launcher on Android TV and Google TV.
 
+## Support this project
+
+If you enjoy these icons, consider supporting the project on Ko-fi. Donations are optional and appreciated!
+
+<a href="https://ko-fi.com/zacharysmith2026"><img src="https://storage.ko-fi.com/cdn/kofi3.png?v=3" alt="Support me on Ko-fi" width="200"></a>
+
 ## Request an icon
 
 Want an icon added? [Open an icon request](https://github.com/DrZacharySmith/projectivy-transparent-icons/issues/new).
