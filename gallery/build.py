@@ -51,7 +51,7 @@ def main():
         url = quote(relative.as_posix(), safe='/')
         caption = f'{name}<small>{style}</small>' if show_styles else name
         filename = escape(path.name, quote=True)
-        cards.append(f'<li><a class="card" href="{url}" download="{filename}">'
+        cards.append(f'<li data-style="{path.parent.name}"><a class="card" href="{url}" download="{filename}">'
                      f'<img src="{url}" alt="" loading="lazy"><span>{caption}</span>'
                      '<span class="download-label">Download PNG</span></a></li>')
     template = (SOURCE / 'index.html').read_text(encoding='utf-8')

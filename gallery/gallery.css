@@ -76,3 +76,22 @@ button { cursor: pointer; }
 @media (max-width: 360px) {
   #icons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+label[for="style-filter"] {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: 650;
+}
+
+#style-filter {
+  width: 220px;
+  max-width: 100%;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid #536881;
+  border-radius: 8px;
+  background: #182335;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
