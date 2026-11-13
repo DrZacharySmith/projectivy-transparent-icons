@@ -41,7 +41,20 @@ pattern = r'^## Gallery\s*\n.*?(?=^## |\Z)'
 text, replaced = re.subn(pattern, lambda _: gallery, text, count=1, flags=re.M|re.S)
 if replaced != 1:
     raise SystemExit('README must contain a ## Gallery section.')
-text = re.sub(r'\*\*\d+ transparent PNG icons\*\*', f'**{count} transparent PNG icons**', text)
+steampunk_dir = ROOT / 'icons/styles/steampunk'
+steampunk_count = sum(
+    p.is_file() and p.suffix.lower() == '.png' and not p.name.startswith('.')
+    for p in steampunk_dir.iterdir()
+)
+total_count = count + steampunk_count
+text, count_replacements = re.subn(
+    r'\*\*\d+ transparent(?:\s|&#xA0;|&nbsp;)+PNG icons\*\*',
+    f'**{total_count} transparent PNG icons**',
+    text,
+    count=1,
+)
+if count_replacements != 1:
+    raise SystemExit('Could not find the icon count in README.md.')
 # Deterministic six-column proof sheet. Original PNGs are never modified.
 W=2400; margin=72; gap=24; cols=6; cw=(W-2*margin-(cols-1)*gap)//cols; ch=260; top=230
 rows=math.ceil(count/cols); H=top+rows*ch+(rows-1)*gap+110
