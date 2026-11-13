@@ -10,7 +10,7 @@ If you enjoy these icons, consider supporting the project on Ko-fi. Donations ar
 
 Click the link above to open the gallery. Search by app name or scroll to browse, then click any icon to download its original PNG.
 
-A collection of **562 transparent PNG icons** for customizing Projectivy Launcher on Android TV and Google TV.
+A collection of **566 transparent PNG icons** for customizing Projectivy Launcher on Android TV and Google TV.
 
 ## Request an icon
 
