@@ -1,16 +1,16 @@
 # Projectivy Transparent Icons
 
-## [Browse and search icons →](https://drzacharysmith.github.io/projectivy-transparent-icons/)
-
-Click the link above to open the gallery. Search by app name or scroll to browse, then click any icon to download its original PNG.
-
-A collection of **279 transparent PNG icons** for customizing Projectivy Launcher on Android TV and Google TV.
-
 ## Support this project
 
 If you enjoy these icons, consider supporting the project on Ko-fi. Donations are optional and appreciated!
 
 <a href="https://ko-fi.com/zacharysmith2026"><img src="https://storage.ko-fi.com/cdn/kofi3.png?v=3" alt="Support me on Ko-fi" width="200"></a>
+
+## [Browse and search icons →](https://drzacharysmith.github.io/projectivy-transparent-icons/)
+
+Click the link above to open the gallery. Search by app name or scroll to browse, then click any icon to download its original PNG.
+
+A collection of **279 transparent PNG icons** for customizing Projectivy Launcher on Android TV and Google TV.
 
 ## Request an icon
 
@@ -20,12 +20,14 @@ Please include the app name, a link to the app or its logo.
 
 ## Download
 
-- **Individual icon:** Open the searchable gallery above and click **Download PNG** on the icon you want.
-- **Entire collection:** choose **Code → Download ZIP**, then extract the archive.
+Open the [icon gallery](https://drzacharysmith.github.io/projectivy-transparent-icons/).
+Search by app name across both styles, or use the **Icon style** menu to filter by Glossy Cartoon or Steampunk.
 
-Copy the PNGs to a location your TV can access, then use Projectivy Launcher’s icon customization options to select an image for an app or shortcut. Menu wording may vary by version.
+- **One icon** — Click the icon or **Download PNG** to save the original transparent PNG.
+- **Several icons** — Check **Select** on each icon you want. Selections stay checked when you change searches or switch styles. Click **Download selected ZIP**, then extract the archive.
+- **Entire collection** — On GitHub, choose **Code → Download ZIP**. Extract the archive and open `icons/styles/` to find both styles. The ZIP also includes the other repository files.
 
-## Gallery
+Copy the PNGs to a location your TV can access, then use Projectivy Launcher's icon customization options to select an image for an app or shortcut.
 
 [Browse and search all icons →](https://drzacharysmith.github.io/projectivy-transparent-icons/)
 
