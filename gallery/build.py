@@ -54,8 +54,12 @@ def main():
         cards.append(f'<li data-style="{path.parent.name}"><a class="card" href="{url}" download="{filename}">'
                      f'<img src="{url}" alt="" loading="lazy"><span>{caption}</span>'
                      '<span class="download-label">Download PNG</span></a>'
+                     '<div class="icon-actions">'
                      f'<label class="icon-select"><input type="checkbox" aria-label="Select {name} ({style})"> '
-                     'Select</label></li>')
+                     'Select</label>'
+                     f'<button class="preview-button" type="button" '
+                     f'aria-label="Preview {name} ({style})">Preview</button>'
+                     '</div></li>')
     template = (SOURCE / 'index.html').read_text(encoding='utf-8')
     (OUTPUT / 'index.html').write_text(template.replace('{{COUNT}}', str(len(icons)))
                                        .replace('{{ICONS}}', '\n'.join(cards)), encoding='utf-8')
