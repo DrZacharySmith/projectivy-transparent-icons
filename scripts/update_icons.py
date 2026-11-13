@@ -4,7 +4,7 @@ import hashlib, html, math, re
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
-ICON_DIR = ROOT / 'icons'
+ICON_DIR = ROOT / 'icons/styles/glossy-cartoon'
 README = ROOT / 'README.md'
 PROOF = ROOT / 'Projectivy-Icons-Proof-Sheet.png'
 text = README.read_text(encoding='utf-8')
@@ -24,7 +24,7 @@ for p in files:
     with Image.open(p) as im:
         im.verify()
 def url(p):
-    return 'icons/' + quote(p.name, safe='')
+    return 'icons/styles/glossy-cartoon/' + quote(p.name, safe='')
 def version(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()[:12]
 cells = []

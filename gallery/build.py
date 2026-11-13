@@ -25,8 +25,8 @@ def display_names(readme):
 def main():
     glossy_readme = ROOT / 'styles/glossy-cartoon/README.md'
     collections = (
-        ('Glossy Cartoon', ROOT / 'icons', glossy_readme if glossy_readme.exists() else ROOT / 'README.md'),
-        ('Steampunk', ROOT / 'styles/steampunk/icons', ROOT / 'styles/steampunk/README.md'),
+        ('Glossy Cartoon', ROOT / 'icons/styles/glossy-cartoon', glossy_readme if glossy_readme.exists() else ROOT / 'README.md'),
+        ('Steampunk', ROOT / 'icons/styles/steampunk', ROOT / 'styles/steampunk/README.md'),
     )
     icons = []
     for style, folder, readme in collections:

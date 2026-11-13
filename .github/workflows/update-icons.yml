@@ -67,8 +67,26 @@ jobs:
           next_tag="v${BASH_REMATCH[1]}.$((10#${BASH_REMATCH[2]} + 1))"
 
           target=$(git rev-parse HEAD)
-          changes=$(git -c core.quotePath=false diff --name-status --no-renames \
-            "$previous_tag" "$target" -- ':(glob,icase)icons/*.png')
+          empty_tree=$(git mktree </dev/null)
+
+          compare_style() {
+            local style="$1" old_path="$2"
+            local new_path="icons/styles/$style"
+            local before after
+
+            before=$(git rev-parse --verify "$previous_tag:$new_path" 2>/dev/null) ||
+              before=$(git rev-parse --verify "$previous_tag:$old_path" 2>/dev/null) ||
+              before="$empty_tree"
+            after=$(git rev-parse --verify "$target:$new_path" 2>/dev/null) ||
+              after="$empty_tree"
+
+            git -c core.quotePath=false diff --name-status --no-renames \
+              "$before" "$after" -- ":(glob,icase)*.png" |
+              sed "s|^\\(.[[:space:]]\\)|\\1$style/|"
+          }
+
+          changes=$(compare_style glossy-cartoon icons &&
+                    compare_style steampunk styles/steampunk/icons)
 
           if [[ -z "$changes" ]]; then
             echo "No icon changes since $previous_tag. Skipping release."
