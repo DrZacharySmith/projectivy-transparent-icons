@@ -86,3 +86,27 @@ zipButton.addEventListener('click', async () => {
     updateSelection();
   }
 });
+
+const previewDialog = document.querySelector('#icon-preview');
+const previewTitle = document.querySelector('#preview-title');
+const previewIcon = document.querySelector('#preview-icon');
+const previewDownload = document.querySelector('#preview-download');
+
+document.querySelector('#icons').addEventListener('click', (event) => {
+  const button = event.target.closest('.preview-button');
+  if (!button) return;
+
+  const card = button.closest('li').querySelector('.card');
+  const title = button.getAttribute('aria-label').replace(/^Preview /, '');
+
+  previewTitle.textContent = title;
+  previewIcon.alt = title;
+  previewIcon.src = card.href;
+  previewDownload.href = card.href;
+  previewDownload.download = card.download;
+  previewDialog.showModal();
+});
+
+previewDialog.addEventListener('close', () => {
+  previewIcon.removeAttribute('src');
+});

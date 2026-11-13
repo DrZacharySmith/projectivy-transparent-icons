@@ -128,3 +128,82 @@ label[for="style-filter"] {
 @media (max-width: 580px) {
   .viewport { --row: 129px; }
 }
+
+.icon-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0 0.65rem;
+}
+
+#icon-preview {
+  box-sizing: border-box;
+  width: min(760px, calc(100% - 2rem));
+  max-height: calc(100% - 2rem);
+  padding: 1rem;
+  overflow: auto;
+  color: #edf4ff;
+  background: #172231;
+  border: 1px solid #526981;
+  border-radius: 12px;
+}
+
+#icon-preview::backdrop {
+  background: rgb(0 0 0 / 75%);
+}
+
+#icon-preview form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#preview-title {
+  margin: 0.25rem 0 0.75rem;
+}
+
+.preview-image {
+  display: grid;
+  place-items: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: repeating-conic-gradient(#424c5a 0% 25%, #313a47 0% 50%)
+    0 0 / 24px 24px;
+}
+
+#preview-icon {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 55vh;
+  object-fit: contain;
+}
+
+#preview-download {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #a7dcff;
+}
+
+.icon-actions .preview-button {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.55rem;
+  min-height: 32px;
+}
+
+.card img {
+  width: 100%;
+  height: clamp(72px, 9vw, 112px);
+  max-height: none;
+  object-fit: contain;
+}
+
+#icons {
+  grid-auto-rows: auto;
+}
+
+#icons .card {
+  grid-template-rows: auto auto auto;
+  height: auto;
+}
