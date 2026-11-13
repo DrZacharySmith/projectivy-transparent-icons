@@ -29,6 +29,8 @@ Search by app name across both styles, or use the **Icon style** menu to filter 
 
 Copy the PNGs to a location your TV can access, then use Projectivy Launcher's icon customization options to select an image for an app or shortcut.
 
+## Gallery
+
 [Browse and search all icons →](https://drzacharysmith.github.io/projectivy-transparent-icons/)
 
 | Glossy Cartoon | Steampunk | Glossy Cartoon | Steampunk | Glossy Cartoon | Steampunk |
