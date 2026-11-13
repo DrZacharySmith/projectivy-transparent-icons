@@ -31,11 +31,10 @@ gallery = """## Gallery
 
 [Browse and search all icons →](https://drzacharysmith.github.io/projectivy-transparent-icons/)
 
-| Glossy Cartoon | Steampunk |
-| :---: | :---: |
-| <img src="icons/styles/glossy-cartoon/TiviMate-16x9.png" width="140" alt="TiviMate"> | <img src="icons/styles/steampunk/TiviMate-Metal.png" width="140" alt="TiviMate Steampunk"> |
-| <img src="icons/styles/glossy-cartoon/Stremio-16x9.png" width="140" alt="Stremio"> | <img src="icons/styles/steampunk/Stremio-Metal.png" width="140" alt="Stremio Steampunk"> |
-| <img src="icons/styles/glossy-cartoon/TiviDeck-16x9.png" width="140" alt="TiviDeck"> | <img src="icons/styles/steampunk/TiviDeck-Metal.png" width="140" alt="TiviDeck Steampunk"> |
+| Glossy Cartoon | Steampunk | Glossy Cartoon | Steampunk | Glossy Cartoon | Steampunk |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| <img src="icons/styles/glossy-cartoon/TiviMate-16x9.png" width="100" alt="TiviMate Glossy Cartoon"> | <img src="icons/styles/steampunk/TiviMate-Metal.png" width="100" alt="TiviMate Steampunk"> | <img src="icons/styles/glossy-cartoon/Stremio-16x9.png" width="100" alt="Stremio Glossy Cartoon"> | <img src="icons/styles/steampunk/Stremio-Metal.png" width="100" alt="Stremio Steampunk"> | <img src="icons/styles/glossy-cartoon/TiviDeck-16x9.png" width="100" alt="TiviDeck Glossy Cartoon"> | <img src="icons/styles/steampunk/TiviDeck-Metal.png" width="100" alt="TiviDeck Steampunk"> |
+| <img src="icons/styles/glossy-cartoon/Jellyfin-16x9.png" width="100" alt="Jellyfin Glossy Cartoon"> | <img src="icons/styles/steampunk/Jellyfin-Metal.png" width="100" alt="Jellyfin Steampunk"> | <img src="icons/styles/glossy-cartoon/Plex-16x9.png" width="100" alt="Plex Glossy Cartoon"> | <img src="icons/styles/steampunk/Plex-Metal.png" width="100" alt="Plex Steampunk"> | <img src="icons/styles/glossy-cartoon/Netflix-16x9.png" width="100" alt="Netflix Glossy Cartoon"> | <img src="icons/styles/steampunk/Netflix-Metal.png" width="100" alt="Netflix Steampunk"> |
 
 """
 pattern = r'^## Gallery\s*\n.*?(?=^## |\Z)'
