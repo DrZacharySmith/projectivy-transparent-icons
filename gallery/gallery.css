@@ -95,3 +95,36 @@ label[for="style-filter"] {
   font: inherit;
   cursor: pointer;
 }
+
+#icons > li {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+
+#icons .card {
+  height: auto;
+}
+
+.icon-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 28px;
+  font-size: .82rem;
+  cursor: pointer;
+}
+
+.icon-select input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+.viewport {
+  --row: 148px;
+}
+
+@media (max-width: 580px) {
+  .viewport { --row: 129px; }
+}
