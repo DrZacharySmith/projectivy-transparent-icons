@@ -53,11 +53,13 @@ def main():
         filename = escape(path.name, quote=True)
         cards.append(f'<li data-style="{path.parent.name}"><a class="card" href="{url}" download="{filename}">'
                      f'<img src="{url}" alt="" loading="lazy"><span>{caption}</span>'
-                     '<span class="download-label">Download PNG</span></a></li>')
+                     '<span class="download-label">Download PNG</span></a>'
+                     f'<label class="icon-select"><input type="checkbox" aria-label="Select {name} ({style})"> '
+                     'Select</label></li>')
     template = (SOURCE / 'index.html').read_text(encoding='utf-8')
     (OUTPUT / 'index.html').write_text(template.replace('{{COUNT}}', str(len(icons)))
                                        .replace('{{ICONS}}', '\n'.join(cards)), encoding='utf-8')
-    for asset in ('gallery.css', 'gallery.js'):
+    for asset in ('gallery.css', 'gallery.js', 'jszip.min.js'):
         shutil.copyfile(SOURCE / asset, OUTPUT / asset)
     print(f'Built searchable gallery with {len(icons)} icons.')
 

@@ -6,6 +6,7 @@
   <meta name="description" content="Browse and search transparent Projectivy Launcher icons.">
   <title>Projectivy Icon Gallery</title>
   <link rel="stylesheet" href="gallery.css">
+  <script defer src="jszip.min.js"></script>
   <script defer src="gallery.js"></script>
 </head>
 <body>
@@ -26,6 +27,10 @@
       <option value="glossy-cartoon">Glossy Cartoon</option>
       <option value="steampunk">Steampunk</option>
     </select>
+    <div id="zip-controls">
+      <button id="download-zip" type="button" disabled>Download selected ZIP</button>
+      <span id="selection-count" role="status">0 icons selected</span>
+    </div>
     <p id="count" role="status">{{COUNT}} icons</p>
     <section class="viewport" aria-label="Scrollable icon gallery" tabindex="0">
       <ul id="icons">
