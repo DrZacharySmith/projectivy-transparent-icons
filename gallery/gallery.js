@@ -1,3 +1,4 @@
+const styleFilter = document.querySelector("#style-filter");
 const search = document.querySelector('#search');
 const clear = document.querySelector('#clear');
 const count = document.querySelector('#count');
@@ -10,10 +11,11 @@ function filterIcons() {
   let matches = 0;
   for (const card of cards) {
     const label = card.querySelector('span').textContent.toLowerCase();
-    card.hidden = !terms.every(term => label.includes(term));
+    const matchesStyle = styleFilter.value === "all" || card.dataset.style === styleFilter.value;
+    card.hidden = !matchesStyle || !terms.every(term => label.includes(term));
     if (!card.hidden) matches++;
   }
-  count.textContent = terms.length
+  count.textContent = terms.length || styleFilter.value !== "all"
     ? `${matches} of ${cards.length} icons`
     : `${cards.length} icons`;
   empty.hidden = matches > 0;
@@ -21,6 +23,7 @@ function filterIcons() {
   viewport.scrollTop = 0;
 }
 
+styleFilter.addEventListener("change", filterIcons);
 search.addEventListener('input', filterIcons);
 clear.addEventListener('click', () => {
   search.value = '';
