@@ -27,15 +27,17 @@ def url(p):
     return 'icons/styles/glossy-cartoon/' + quote(p.name, safe='')
 def version(p):
     return hashlib.sha256(p.read_bytes()).hexdigest()[:12]
-cells = []
-for p in files:
-    u = url(p); n = html.escape(name(p), quote=True)
-    cells.append(f'<a href="{u}"><img src="{u}?v={version(p)}" width="180" alt="{n}"></a><br><a href="{u}">{n}</a>')
-gallery = '## Gallery\n\n<details open>\n' + f'<summary><strong>Browse all {count} icons — click to collapse or expand</strong></summary>\n\nClick an image or name to open its PNG, then choose **Download raw file**.\n\n| | | |\n| :---: | :---: | :---: |\n'
-for i in range(0, count, 3):
-    row = cells[i:i+3]
-    gallery += '| ' + ' | '.join(row + [''] * (3-len(row))) + ' |\n'
-gallery += '\n</details>\n\n'
+gallery = """## Gallery
+
+[Browse and search all icons →](https://drzacharysmith.github.io/projectivy-transparent-icons/)
+
+| Glossy Cartoon | Steampunk |
+| :---: | :---: |
+| <img src="icons/styles/glossy-cartoon/TiviMate-16x9.png" width="140" alt="TiviMate"> | <img src="icons/styles/steampunk/TiviMate-Metal.png" width="140" alt="TiviMate Steampunk"> |
+| <img src="icons/styles/glossy-cartoon/Stremio-16x9.png" width="140" alt="Stremio"> | <img src="icons/styles/steampunk/Stremio-Metal.png" width="140" alt="Stremio Steampunk"> |
+| <img src="icons/styles/glossy-cartoon/TiviDeck-16x9.png" width="140" alt="TiviDeck"> | <img src="icons/styles/steampunk/TiviDeck-Metal.png" width="140" alt="TiviDeck Steampunk"> |
+
+"""
 pattern = r'^## Gallery\s*\n.*?(?=^## |\Z)'
 text, replaced = re.subn(pattern, lambda _: gallery, text, count=1, flags=re.M|re.S)
 if replaced != 1:
