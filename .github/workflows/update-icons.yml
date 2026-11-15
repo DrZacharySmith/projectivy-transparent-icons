@@ -80,9 +80,10 @@ jobs:
             after=$(git rev-parse --verify "$target:$new_path" 2>/dev/null) ||
               after="$empty_tree"
 
-            git -c core.quotePath=false diff --name-status --no-renames \
+            git -c core.quotePath=false diff --name-status --find-renames=100% \
               "$before" "$after" -- ":(glob,icase)*.png" |
-              sed "s|^\\(.[[:space:]]\\)|\\1$style/|"
+              awk -F '\t' -v style="$style" 'BEGIN { OFS=FS }
+                { $2=style "/" $2; if (NF == 3) $3=style "/" $3; print }'
           }
 
           changes=$(compare_style glossy-cartoon icons &&
@@ -100,11 +101,15 @@ jobs:
 
           {
             printf '## Icon changes since %s\n\n' "$previous_tag"
-            while IFS=$'\t' read -r status path; do
+            while IFS=$'\t' read -r status path new_path; do
               case "$status" in
                 A) change=Added ;;
                 M) change=Updated ;;
                 D) change=Removed ;;
+                R100)
+                  printf -- '- Renamed: `%s` → `%s`\n' "$path" "$new_path"
+                  continue
+                  ;;
                 *) change=Changed ;;
               esac
               printf -- '- %s: `%s`\n' "$change" "${path#icons/}"

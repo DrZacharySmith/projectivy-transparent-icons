@@ -33,7 +33,8 @@ def main():
         labels = display_names(readme)
         for path in folder.glob('*'):
             if path.is_file() and path.suffix.lower() == '.png' and not path.name.startswith('.'):
-                name = re.sub(r'\s*-\s*16x9$', '', path.stem, flags=re.I).strip()
+                suffix = r'(?:16x9|Glossy)' if style == 'Glossy Cartoon' else '16x9'
+                name = re.sub(rf'\s*-\s*{suffix}$', '', path.stem, flags=re.I).strip()
                 icons.append((labels.get(path.name, escape(name)), style, path))
     if not icons:
         raise SystemExit('No icon PNGs found.')
