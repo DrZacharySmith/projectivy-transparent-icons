@@ -16,7 +16,7 @@ files = [p for p in ICON_DIR.iterdir() if p.is_file() and p.suffix.lower() == '.
 if not files:
     raise SystemExit('No PNG icons found; refusing to replace gallery.')
 def name(p):
-    return labels.get(p.name) or re.sub(r'\s*-\s*16x9$', '', p.stem, flags=re.I).strip()
+    return labels.get(p.name) or re.sub(r'\s*-\s*(?:16x9|Glossy)$', '', p.stem, flags=re.I).strip()
 files.sort(key=lambda p: (name(p).casefold(), p.name.casefold()))
 count = len(files)
 # Validate all inputs before writing outputs.
@@ -33,8 +33,8 @@ gallery = """## Gallery
 
 | Glossy Cartoon | Steampunk | Glossy Cartoon | Steampunk | Glossy Cartoon | Steampunk |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| <img src="icons/styles/glossy-cartoon/TiviMate-16x9.png" width="100" alt="TiviMate Glossy Cartoon"> | <img src="icons/styles/steampunk/TiviMate-Metal.png" width="100" alt="TiviMate Steampunk"> | <img src="icons/styles/glossy-cartoon/Stremio-16x9.png" width="100" alt="Stremio Glossy Cartoon"> | <img src="icons/styles/steampunk/Stremio-Metal.png" width="100" alt="Stremio Steampunk"> | <img src="icons/styles/glossy-cartoon/TiviDeck-16x9.png" width="100" alt="TiviDeck Glossy Cartoon"> | <img src="icons/styles/steampunk/TiviDeck-Metal.png" width="100" alt="TiviDeck Steampunk"> |
-| <img src="icons/styles/glossy-cartoon/Jellyfin-16x9.png" width="100" alt="Jellyfin Glossy Cartoon"> | <img src="icons/styles/steampunk/Jellyfin-Metal.png" width="100" alt="Jellyfin Steampunk"> | <img src="icons/styles/glossy-cartoon/Plex-16x9.png" width="100" alt="Plex Glossy Cartoon"> | <img src="icons/styles/steampunk/Plex-Metal.png" width="100" alt="Plex Steampunk"> | <img src="icons/styles/glossy-cartoon/Netflix-16x9.png" width="100" alt="Netflix Glossy Cartoon"> | <img src="icons/styles/steampunk/Netflix-Metal.png" width="100" alt="Netflix Steampunk"> |
+| <img src="icons/styles/glossy-cartoon/TiviMate-Glossy.png" width="100" alt="TiviMate Glossy Cartoon"> | <img src="icons/styles/steampunk/TiviMate-Metal.png" width="100" alt="TiviMate Steampunk"> | <img src="icons/styles/glossy-cartoon/Stremio-Glossy.png" width="100" alt="Stremio Glossy Cartoon"> | <img src="icons/styles/steampunk/Stremio-Metal.png" width="100" alt="Stremio Steampunk"> | <img src="icons/styles/glossy-cartoon/TiviDeck-Glossy.png" width="100" alt="TiviDeck Glossy Cartoon"> | <img src="icons/styles/steampunk/TiviDeck-Metal.png" width="100" alt="TiviDeck Steampunk"> |
+| <img src="icons/styles/glossy-cartoon/Jellyfin-Glossy.png" width="100" alt="Jellyfin Glossy Cartoon"> | <img src="icons/styles/steampunk/Jellyfin-Metal.png" width="100" alt="Jellyfin Steampunk"> | <img src="icons/styles/glossy-cartoon/Plex-Glossy.png" width="100" alt="Plex Glossy Cartoon"> | <img src="icons/styles/steampunk/Plex-Metal.png" width="100" alt="Plex Steampunk"> | <img src="icons/styles/glossy-cartoon/Netflix-Glossy.png" width="100" alt="Netflix Glossy Cartoon"> | <img src="icons/styles/steampunk/Netflix-Metal.png" width="100" alt="Netflix Steampunk"> |
 
 """
 pattern = r'^## Gallery\s*\n.*?(?=^## |\Z)'
