@@ -33,6 +33,8 @@ Copy the PNGs to a location your TV can access, then use Projectivy Launcher's i
 
 [Browse and search all icons →](https://drzacharysmith.github.io/projectivy-transparent-icons/)
 
+Proof sheets: [Glossy Cartoon](Projectivy-Icons-Proof-Sheet.png) · [Steampunk](Projectivy-Steampunk-Proof-Sheet.png)
+
 | Glossy Cartoon | Steampunk | Glossy Cartoon | Steampunk | Glossy Cartoon | Steampunk |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | <img src="icons/styles/glossy-cartoon/TiviMate-Glossy.png" width="100" alt="TiviMate Glossy Cartoon"> | <img src="icons/styles/steampunk/TiviMate-Metal.png" width="100" alt="TiviMate Steampunk"> | <img src="icons/styles/glossy-cartoon/Stremio-Glossy.png" width="100" alt="Stremio Glossy Cartoon"> | <img src="icons/styles/steampunk/Stremio-Metal.png" width="100" alt="Stremio Steampunk"> | <img src="icons/styles/glossy-cartoon/TiviDeck-Glossy.png" width="100" alt="TiviDeck Glossy Cartoon"> | <img src="icons/styles/steampunk/TiviDeck-Metal.png" width="100" alt="TiviDeck Steampunk"> |
