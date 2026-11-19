@@ -2,6 +2,7 @@ from html import escape, unescape
 from pathlib import Path
 import re
 import shutil
+import subprocess
 from urllib.parse import quote, unquote
 
 
@@ -20,6 +21,37 @@ def display_names(readme):
             readme.read_text(encoding='utf-8'),
         )
     }
+
+
+def added_dates():
+    # Walk the published branch history so merges use the date icons reached main.
+    result = subprocess.run(
+        ['git', 'log', '--first-parent', '--reverse',
+         '--format=%x00COMMIT%x00%ct', '--name-status', '-z',
+         '--find-renames=100%', '-l0'],
+        cwd=ROOT, check=True, capture_output=True,
+    )
+    tokens = iter(result.stdout.decode('utf-8').split('\0'))
+    dates = {}
+    timestamp = 0
+    for token in tokens:
+        status = token.strip()
+        if not status:
+            continue
+        if status == 'COMMIT':
+            timestamp = int(next(tokens))
+            continue
+        path = next(tokens)
+        if status.startswith('R'):
+            destination = next(tokens)
+            dates[destination] = dates.pop(path, timestamp)
+        elif status == 'A' or status.startswith('C'):
+            if status.startswith('C'):
+                path = next(tokens)
+            dates[path] = timestamp
+        elif status == 'D':
+            dates.pop(path, None)
+    return dates
 
 
 def main():
@@ -43,6 +75,7 @@ def main():
     OUTPUT.mkdir(exist_ok=True)
     if (OUTPUT / 'images').exists():
         shutil.rmtree(OUTPUT / 'images')
+    dates = added_dates()
     cards = []
     for name, style, path in icons:
         relative = Path('images') / path.relative_to(ROOT)
@@ -52,7 +85,8 @@ def main():
         url = quote(relative.as_posix(), safe='/')
         caption = f'{name}<small>{style}</small>' if show_styles else name
         filename = escape(path.name, quote=True)
-        cards.append(f'<li data-style="{path.parent.name}"><a class="card" href="{url}" download="{filename}">'
+        added = dates.get(path.relative_to(ROOT).as_posix(), 0)
+        cards.append(f'<li data-style="{path.parent.name}" data-added="{added}"><a class="card" href="{url}" download="{filename}">'
                      f'<img src="{url}" alt="" loading="lazy"><span>{caption}</span>'
                      '<span class="download-label">Download PNG</span></a>'
                      '<div class="icon-actions">'
