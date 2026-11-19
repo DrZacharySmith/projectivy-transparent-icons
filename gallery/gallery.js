@@ -6,6 +6,19 @@ const empty = document.querySelector('#empty');
 const viewport = document.querySelector('.viewport');
 const cards = [...document.querySelectorAll('#icons li')];
 
+const sortOrder = document.querySelector('#sort-order');
+const iconList = document.querySelector('#icons');
+
+sortOrder.addEventListener('change', () => {
+  const ordered = [...cards];
+  if (sortOrder.value === 'newest') {
+    // Stable sorting retains the existing alphabetical order for equal dates.
+    ordered.sort((a, b) => Number(b.dataset.added) - Number(a.dataset.added));
+  }
+  iconList.append(...ordered);
+  viewport.scrollTop = 0;
+});
+
 function filterIcons() {
   const terms = search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
   let matches = 0;
