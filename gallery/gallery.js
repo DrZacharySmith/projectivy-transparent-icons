@@ -15,6 +15,9 @@ sortOrder.addEventListener('change', () => {
     // Stable sorting retains the existing alphabetical order for equal dates.
     ordered.sort((a, b) => Number(b.dataset.added) - Number(a.dataset.added));
   }
+  if (sortOrder.value === 'name-desc') {
+    ordered.reverse();
+  }
   iconList.append(...ordered);
   viewport.scrollTop = 0;
 });
